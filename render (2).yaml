@@ -1,0 +1,13 @@
+# Exported from Render on 2025-02-02T05:52:29Z
+services:
+- type: web
+  name: apitele-1
+  runtime: python
+  repo: https://github.com/Bennguyenru/apitele
+  plan: starter
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn -b 0.0.0.0:10000 app:app
+  previews:
+    generation: automatic
+version: "1"
